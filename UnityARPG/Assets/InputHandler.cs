@@ -12,6 +12,9 @@ public class InputHandler : MonoBehaviour
     PlayerControls inputActions;
     Vector2 movementInput;
     Vector2 cameraInput;
+    public bool b_Input;
+    public bool rollFlag;
+    public bool isinteract;
     public void OnEnable()
     {
         if(inputActions==null)
@@ -33,6 +36,7 @@ public class InputHandler : MonoBehaviour
     public void TickInput(float delta)
     {
         MoveInput(delta);
+        HandleRollInput(delta);
     }
 
     private void MoveInput(float delta)
@@ -43,6 +47,15 @@ public class InputHandler : MonoBehaviour
         mouseX = cameraInput.x;
         mouseY = cameraInput.y;
 
+    }
+
+    private void HandleRollInput(float delta)
+    {
+        b_Input = inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Started;
+        if(b_Input)
+        {
+            rollFlag = true;
+        }
     }
     // Start is called before the first frame update
     void Start()
