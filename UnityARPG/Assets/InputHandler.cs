@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +12,8 @@ public class InputHandler : MonoBehaviour
     PlayerControls inputActions;
     Vector2 movementInput;
     Vector2 cameraInput;
+    
+    CameraHandler cameraHandler;
     public void OnEnable()
     {
         if(inputActions==null)
@@ -28,7 +30,20 @@ public class InputHandler : MonoBehaviour
     {
         inputActions.Disable();
     }
+    private void  Awake()
+    {
+        cameraHandler=CameraHandler.singleton;
+    }
 
+    private  void FixedUpdate()
+    {
+        float delta=Time.fixedDeltaTime;
+        if(cameraHandler!=null)
+        {
+            cameraHandler.FollowTarget(delta);
+            cameraHandler.HandleCameraRotation(delta,mouseX,mouseY);
+        }
+    }
 
     public void TickInput(float delta)
     {
