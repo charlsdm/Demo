@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4be8b60ec6e2346ab7cd8f1526ec8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 1653823359}
+  targetTransform: {fileID: 1653823360}
   cameraTransform: {fileID: 963194228}
   cameraPivotTransform: {fileID: 437019933}
   lookSpeed: 0.1
@@ -884,6 +884,7 @@ MonoBehaviour:
   mouseY: 0
   b_Input: 0
   rollFlag: 0
+  isinteract: 0
 --- !u!114 &1653823358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,42 +899,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   canRotate: 1
-<<<<<<< HEAD
---- !u!4 &1653823359 stripped
+--- !u!4 &1653823360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4086279202973348, guid: c20397bf1592dc040b827e8716b0bd41,
     type: 3}
   m_PrefabInstance: {fileID: 1653823352}
   m_PrefabAsset: {fileID: 0}
-=======
---- !u!1 &1947123949
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1947123950}
-  m_Layer: 0
-  m_Name: CameraHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1947123950
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947123949}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9349259, z: 0.2936101}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> 40719de3fc3b111d1ba011b019f182ee779bc951

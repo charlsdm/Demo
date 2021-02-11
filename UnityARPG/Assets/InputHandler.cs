@@ -12,14 +12,11 @@ public class InputHandler : MonoBehaviour
     PlayerControls inputActions;
     Vector2 movementInput;
     Vector2 cameraInput;
-<<<<<<< .merge_file_a13560
     
     CameraHandler cameraHandler;
-=======
     public bool b_Input;
     public bool rollFlag;
     public bool isinteract;
->>>>>>> .merge_file_a11644
     public void OnEnable()
     {
         if(inputActions==null)
