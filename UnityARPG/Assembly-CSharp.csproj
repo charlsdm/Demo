@@ -37,7 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\AnimatorHandler.cs" />
-     <Compile Include="Assets\CameraHandler.cs" />
      <Compile Include="Assets\InputHandler.cs" />
      <Compile Include="Assets\PlayerControls.cs" />
      <Compile Include="Assets\PlayerLocamotion.cs" />

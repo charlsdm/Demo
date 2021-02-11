@@ -53,12 +53,9 @@ public class PlayerLocamotion : MonoBehaviour
         myTransform.rotation = targetRotation;
 
     }
-    #endregion
-    // Update is called once per frame
-    public void Update()
+
+    public void HandleMovement(float delta)
     {
-        float delta = Time.deltaTime;
-        inputHandler.TickInput(delta);
         moveDirection = cameraObject.forward * inputHandler.vertical;
         moveDirection += cameraObject.right * inputHandler.horizontal;
         moveDirection.Normalize();
@@ -69,9 +66,44 @@ public class PlayerLocamotion : MonoBehaviour
         Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector);
         rigidbody.velocity = projectedVelocity;
         animatorHandler.UpdateAnimatorValues(inputHandler.moveAmount, 0);
-        if(animatorHandler.canRotate)
+        if (animatorHandler.canRotate)
         {
             HandleRotation(delta);
         }
+    }
+
+    public void HandleROllingAndSprinting(float delta)
+    {
+        if (animatorHandler.anim.GetBool("isinteracting"))
+            return;
+        if(inputHandler.rollFlag)
+        {
+            moveDirection = cameraObject.forward * inputHandler.vertical;
+            moveDirection += cameraObject.right * inputHandler.horizontal;
+
+            if(inputHandler.moveAmount>0)
+            {
+                animatorHandler.PlayTargetAnimation("Rolling", true);
+                moveDirection.y = 0;
+                Quaternion rollRotation = Quaternion.LookRotation(moveDirection);
+                myTransform.rotation = rollRotation;
+
+            }
+            else
+            {
+                animatorHandler.PlayTargetAnimation("Back", true);
+            }
+        }
+
+    }
+    #endregion
+    // Update is called once per frame
+    public void Update()
+    {
+        float delta = Time.deltaTime;
+        inputHandler.TickInput(delta);
+        HandleMovement(delta);
+        HandleROllingAndSprinting(delta);
+ 
     }
 }
