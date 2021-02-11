@@ -13,7 +13,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -572,6 +572,9 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>C:/Users/Administrator/Desktop/Demo/Demo/UnityARPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+        <HintPath>C:/Users/Administrator/Desktop/Demo/Demo/UnityARPG/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.InputSystem">
         <HintPath>C:/Users/Administrator/Desktop/Demo/Demo/UnityARPG/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
@@ -595,9 +598,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/Administrator/Desktop/Demo/Demo/UnityARPG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/Administrator/Desktop/Demo/Demo/UnityARPG/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
